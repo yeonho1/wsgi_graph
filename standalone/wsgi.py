@@ -5,8 +5,6 @@ except ImportError:
 from html import escape
 import matplotlib.pyplot as plt
 
-plt.grid(True)
-
 html = b"""
 <html>
 <body>
@@ -39,16 +37,9 @@ def application(environ, start_response):
         a, b, c = int(a), int(b), int(c)
         x_values = list(range(-4, 5))
         y_values = [a * x ** 2 + b * x + c for x in x_values]
-        xAxis_x = x_values
-        xAxis_y = [0] * len(x_values)
-        yAxis_x = [0] * len(y_values)
-        yAxis_y = y_values
         fig = plt.figure()
         graph = plt.plot(x_values, y_values)
-        print(yAxis_x)
-        print(yAxis_y)
-        xAxis = plt.plot(xAxis_x, xAxis_y, color='k')
-        yAxis = plt.plot(yAxis_x, yAxis_y, color='k')
+        plt.grid()
         fig.savefig('result.png')
     response_body = html
     start_response('200 OK', [
