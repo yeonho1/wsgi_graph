@@ -1,4 +1,7 @@
-from urllib.parse import parse_qs
+try:
+    from urllib.parse import parse_qs
+except ImportError:
+    from cgi import parse_qs
 from html import escape
 import matplotlib.pyplot as plt
 
