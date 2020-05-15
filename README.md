@@ -7,20 +7,20 @@
 > Matplotlib
 > ```
 
-> ### Usage
-> #### Install `matplotlib`
+> ## Usage
+> ### Install `matplotlib`
 > ```
 > $ pip install matplotlib
 > ```
 > **Note**: superuser privilege is required. If you don't have superuser privilege, you can use `--user` option.
-> #### Standalone run
+> ### Standalone run
 > (in root directory of repository)
 > ```
 > $ cd standalone && python serve.py
 > ```
-> #### Associate with `mod_wsgi` on Apache (On development)
+> ### Associate with `mod_wsgi` on Apache (On development)
 > Install `mod_wsgi` (with `apt`, `yum`, or by compiling source) and:
-> ##### On Red Hat Linux
+> #### On Red Hat Linux
 > Create a file on directory `/etc/httpd/conf.d/` (Recommend a filename ends with `.conf`)
 > and write as below:
 > ```
@@ -31,7 +31,7 @@
 > $ service httpd restart
 > ```
 > **Note**: superuser privilege is required.
-> ##### On Debian Linux
+> #### On Debian Linux
 > Create a file on directory `/etc/apache2/conf-enabled/` (Recommend a filename ends with `.conf`)
 > and write as below:
 > ```
