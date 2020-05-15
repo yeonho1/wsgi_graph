@@ -27,11 +27,7 @@ def application(environ, start_response):
                 ])
                 return [response_body]
         except:
-            start_response('404 Not Found', [
-                ('Content-Type', 'image/png'),
-                ('Content-Length', '0')
-            ])
-            return ['']
+            pass
     d = parse_qs(environ['QUERY_STRING'])
     a = d.get('a', [''])[0]
     b = d.get('b', [''])[0]
