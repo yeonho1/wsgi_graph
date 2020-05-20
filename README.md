@@ -19,7 +19,7 @@
 > ```
 > $ cd standalone && python serve.py
 > ```
-> ### Associate with `mod_wsgi` on Apache (On development)
+> ### Associate with `mod_wsgi` on Apache
 > Install `mod_wsgi` (with `apt`, `yum`, or by compiling source) and:
 > #### On Red Hat Linux
 > Create a file on directory `/etc/httpd/conf.d/` (Recommend a filename ends with `.conf`)
